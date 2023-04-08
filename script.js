@@ -1,9 +1,70 @@
+//Card Library
+const cardsContainer = [
+    `<div onclick="turnCard(this)" class="card">
+        <div class="front-face-start face">
+            <img class="front-img" src="./images/back.png">
+        </div>
+        <div class="back-face-start face">
+            <img class="back-gif" src="./images/bobrossparrot.gif">
+        </div>
+    </div>`,
+    `<div onclick="turnCard(this)" class="card">
+        <div class="front-face-start face">
+        <img class="front-img" src="./images/back.png">
+        </div>
+        <div class="back-face-start face">
+        <img class="back-gif" src="./images/explodyparrot.gif">
+        </div>
+    </div>`,
+    `<div onclick="turnCard(this)" class="card">
+        <div class="front-face-start face">
+        <img class="front-img" src="./images/back.png">
+        </div>
+        <div class="back-face-start face">
+        <img class="back-gif" src="./images/fiestaparrot.gif">
+        </div>
+    </div>`,
+    `<div onclick="turnCard(this)" class="card">
+        <div class="front-face-start face">
+        <img class="front-img" src="./images/back.png">
+        </div>
+        <div class="back-face-start face">
+        <img class="back-gif" src="./images/metalparrot.gif">
+        </div>
+    </div>`,
+    `<div onclick="turnCard(this)" class="card">
+        <div class="front-face-start face">
+        <img class="front-img" src="./images/back.png">
+        </div>
+        <div class="back-face-start face">
+        <img class="back-gif" src="./images/revertitparrot.gif">
+        </div>
+    </div>`,
+    `<div onclick="turnCard(this)" class="card">
+        <div class="front-face-start face">
+        <img class="front-img" src="./images/back.png">
+        </div>
+        <div class="back-face-start face">
+        <img class="back-gif" src="./images/tripletsparrot.gif">
+        </div>
+    </div>`,
+    `<div onclick="turnCard(this)" class="card">
+        <div class="front-face-start face">
+        <img class="front-img" src="./images/back.png">
+        </div>
+        <div class="back-face-start face">
+        <img class="back-gif" src="./images/unicornparrot.gif">
+        </div>
+    </div>`
+]
+
 //Valid card number check
 let cardsNumber;
 let checker;
 
 askForCardNumber();
 checkNumber();
+
 
 function askForCardNumber() {
     cardsNumber = Number(prompt('Com quantas cartas você quer jogar?'));
@@ -23,7 +84,7 @@ let selectedCards = [];
 
 function cardSelection(){
     let i = 0;
-    while (i < cardsIndex) {
+    while (i < cardsIndex + 1) {
         selectedCards.push(cardsContainer[i]);
         selectedCards.push(cardsContainer[i]);
         i++;
@@ -38,65 +99,30 @@ for (let i = selectedCards.length - 1; i > 0; i--) {
     [selectedCards[i], selectedCards[j]] = [selectedCards[j], selectedCards[i]];
 }
 
-//Card Library
-const cardsContainer = [
-    `<div class="card">
-        <div class="front-face face">
-        <img class="front-img" src="./images/back.png">
-        </div>
-        <div class="back-face face">
-        <img class="back-gif" src="./images/bobrossparrot.gif">
-        </div>
-    </div>`,
-    `<div class="card">
-        <div class="front-face face">
-        <img class="front-img" src="./images/back.png">
-        </div>
-        <div class="back-face face">
-        <img class="back-gif" src="./images/explodyparrot.gif">
-        </div>
-    </div>`,
-    `<div class="card">
-        <div class="front-face face">
-        <img class="front-img" src="./images/back.png">
-        </div>
-        <div class="back-face face">
-        <img class="back-gif" src="./images/fiestaparrot.gif">
-        </div>
-    </div>`,
-    `<div class="card">
-        <div class="front-face face">
-        <img class="front-img" src="./images/back.png">
-        </div>
-        <div class="back-face face">
-        <img class="back-gif" src="./images/metalparrot.gif">
-        </div>
-    </div>`,
-    `<div class="card">
-        <div class="front-face face">
-        <img class="front-img" src="./images/back.png">
-        </div>
-        <div class="back-face face">
-        <img class="back-gif" src="./images/revertitparrot">
-        </div>
-    </div>`,
-    `<div class="card">
-        <div class="front-face face">
-        <img class="front-img" src="./images/back.png">
-        </div>
-        <div class="back-face face">
-        <img class="back-gif" src="./images/tripletsparrot.gif">
-        </div>
-    </div>`,
-    `<div class="card">
-        <div class="front-face face">
-        <img class="front-img" src="./images/back.png">
-        </div>
-        <div class="back-face face">
-        <img class="back-gif" src="./images/unicornparrot.gif">
-        </div>
-    </div>`
-]
+//Sending selectedCards to HTML
+function cardSend(){
+    const cc = document.querySelector('.cards-container')
+    i = 0;
+    while(i < selectedCards.length) {
+        cc.innerHTML += selectedCards[i];
+        i++;
+    }
+}
+
+cardSend();
+
+//Turn Cards
+function turnCard(card) {
+    console.log(card)
+    const cardFront = card.children[0];
+    console.log(cardFront)
+    const cardBack = card.children[1];
+    console.log(cardBack)
+    cardFront.classList.add('turn-front-face');
+    cardBack.classList.add('turn-back-face');
+}
+
+
 
 
 

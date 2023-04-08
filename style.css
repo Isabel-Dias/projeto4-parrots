@@ -50,14 +50,17 @@ body {
     border-radius: 10px;
   }
 
-  .back-face {
+  .back-face-start {
     transform: rotateY(180deg);
   }
+  .back-gif {
+    height: 100px;
+  }
 
-  .card:hover .back-face {
+  .turn-back-face {
     transform: rotateY(0deg);
   }
 
-  .card:hover .front-face {
+  .turn-front-face {
     transform: rotateY(-180deg);
   }

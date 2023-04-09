@@ -1,59 +1,59 @@
 //Card Library
 const cardsContainer = [
-    `<div class="card">
+    `<div data-test="card" class="card">
         <div onclick="turnCard(this)" class="front-face-start face">
-            <img class="front-img" src="./images/back.png">
+            <img data-test="face-down-image" class="front-img" src="./images/back.png">
         </div>
         <div class="back-face-start face">
-            <img class="back-gif" src="./images/bobrossparrot.gif">
+            <img data-test="face-up-image" class="back-gif" src="./images/bobrossparrot.gif">
         </div>
     </div>`,
-    `<div class="card">
+    `<div data-test="card" class="card">
         <div onclick="turnCard(this)" class="front-face-start face">
-        <img class="front-img" src="./images/back.png">
+        <img data-test="face-down-image" class="front-img" src="./images/back.png">
         </div>
         <div class="back-face-start face">
-        <img class="back-gif" src="./images/explodyparrot.gif">
+        <img data-test="face-up-image" class="back-gif" src="./images/explodyparrot.gif">
         </div>
     </div>`,
-    `<div class="card">
+    `<div data-test="card" class="card">
         <div onclick="turnCard(this)" class="front-face-start face">
-        <img class="front-img" src="./images/back.png">
+        <img data-test="face-down-image" class="front-img" src="./images/back.png">
         </div>
         <div class="back-face-start face">
-        <img class="back-gif" src="./images/fiestaparrot.gif">
+        <img data-test="face-up-image" class="back-gif" src="./images/fiestaparrot.gif">
         </div>
     </div>`,
-    `<div class="card">
+    `<div data-test="card" class="card">
         <div onclick="turnCard(this)" class="front-face-start face">
-        <img class="front-img" src="./images/back.png">
+        <img data-test="face-down-image" class="front-img" src="./images/back.png">
         </div>
         <div class="back-face-start face">
-        <img class="back-gif" src="./images/metalparrot.gif">
+        <img data-test="face-up-image" class="back-gif" src="./images/metalparrot.gif">
         </div>
     </div>`,
-    `<div class="card">
+    `<div data-test="card" class="card">
         <div onclick="turnCard(this)" class="front-face-start face">
-        <img class="front-img" src="./images/back.png">
+        <img data-test="face-down-image" class="front-img" src="./images/back.png">
         </div>
         <div class="back-face-start face">
-        <img class="back-gif" src="./images/revertitparrot.gif">
+        <img data-test="face-up-image" class="back-gif" src="./images/revertitparrot.gif">
         </div>
     </div>`,
-    `<div class="card">
+    `<div data-test="card" class="card">
         <div onclick="turnCard(this)" class="front-face-start face">
-        <img class="front-img" src="./images/back.png">
+        <img data-test="face-down-image" class="front-img" src="./images/back.png">
         </div>
         <div class="back-face-start face">
-        <img class="back-gif" src="./images/tripletsparrot.gif">
+        <img data-test="face-up-image" class="back-gif" src="./images/tripletsparrot.gif">
         </div>
     </div>`,
-    `<div class="card">
+    `<div data-test="card" class="card">
         <div onclick="turnCard(this)" class="front-face-start face">
-        <img class="front-img" src="./images/back.png">
+        <img data-test="face-down-image" class="front-img" src="./images/back.png">
         </div>
         <div class="back-face-start face">
-        <img class="back-gif" src="./images/unicornparrot.gif">
+        <img data-test="face-up-image" class="back-gif" src="./images/unicornparrot.gif">
         </div>
     </div>`
 ];
